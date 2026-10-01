@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Xcode build output
+build/
+DerivedData/
+*.xcuserstate
+
+# Xcode user-specific files
+xcuserdata/
+*.xcscmblueprint
+*.xccheckout
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# Archives / artifacts
+*.app
+*.dSYM
+*.dSYM.zip
+*.ipa
+
+# The distributable zip we build locally
+MidiAllNotesOffRelay.zip
