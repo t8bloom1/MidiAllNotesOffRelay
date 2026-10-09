@@ -5,18 +5,18 @@
 # Usage:
 #   ./make-appicon.sh [path-to-source-image]
 #
-# Defaults to ~/Downloads/Guitar-pick.jpg. Requires `sips` (ships with macOS).
+# Defaults to ./MidiStop.png. Requires `sips` (ships with macOS).
 #
 # The icon PNGs are also pre-generated and committed in the asset catalog, so
 # you only need this if you want to change the icon to a different image.
 #
-# A square source is recommended (the current source is 583x583). If the source
+# A square source is recommended (MidiStop.png is 2048x2048). If the source
 # is not square, it is center-padded on black to avoid distortion.
 
 set -euo pipefail
 
-SRC="${1:-$HOME/Downloads/Guitar-pick.jpg}"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SRC="${1:-$SCRIPT_DIR/MidiStop.png}"
 ICONSET_DIR="$SCRIPT_DIR/MidiAllNotesOffRelay/Assets.xcassets/AppIcon.appiconset"
 
 [[ -f "$SRC" ]] || { echo "ERROR: source not found: $SRC" >&2; exit 1; }
